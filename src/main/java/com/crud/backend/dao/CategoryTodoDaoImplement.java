@@ -43,16 +43,12 @@ public class CategoryTodoDaoImplement implements CategoryTodoDao {
     }
 
     @Override
-    public void deleteCategory(Category category) {
-        Category categoryToBeDeleted = categoryRepository.findById(category.getId()).get();
-        if(categoryToBeDeleted.getTodos().size() >= 0) {
-            categoryToBeDeleted.getTodos().forEach(todo -> todoRepository.deleteById(todo.getId()));
-        }
-        categoryRepository.deleteById(category.getId());
+    public void deleteCategory(Long id) {
+        categoryRepository.deleteById(id);
     }
 
     @Override
-    public void deleteTodo(Todo todo) {
-        todoRepository.deleteById(todo.getId());
+    public void deleteTodo(Long id) {
+        todoRepository.deleteById(id);
     }
 }

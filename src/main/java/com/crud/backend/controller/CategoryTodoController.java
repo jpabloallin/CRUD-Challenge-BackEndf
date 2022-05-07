@@ -35,13 +35,14 @@ public class CategoryTodoController {
             return service.updateTodo(todo);
         }
 
-        @DeleteMapping("delete/category")
-        public void deleteCategory(@RequestBody Category category){
-            service.deleteCategory(category);
+        @CrossOrigin
+        @DeleteMapping("delete/category/{id}")
+        public void deleteCategory(@PathVariable Long id){
+            service.deleteCategory(id);
         }
-
-        @DeleteMapping("delete/todo")
-        public void deleteNote(@RequestBody Todo todo){
-            service.deleteTodo(todo);
+        @CrossOrigin
+        @DeleteMapping("delete/todo/{id}")
+        public void deleteNote(@PathVariable Long id){
+            service.deleteTodo(id);
         }
 }

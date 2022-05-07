@@ -30,12 +30,12 @@ public class CategoryTodoService {
         return categoryTodoService.updateTodo(todo);
     }
 
-    public void deleteCategory(Category category){
-        categoryTodoService.deleteCategory(category);
+    public void deleteCategory(Long id){
+        categoryTodoService.deleteCategory(id);
     }
 
-    public void deleteTodo(Todo todo){
-        categoryTodoService.deleteTodo(todo);
+    public void deleteTodo(Long id){
+        categoryTodoService.deleteTodo(id);
     }
 
 }

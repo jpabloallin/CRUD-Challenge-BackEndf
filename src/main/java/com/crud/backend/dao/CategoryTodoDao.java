@@ -15,8 +15,8 @@ public interface CategoryTodoDao {
 
         Todo updateTodo(Todo todo);
 
-        void deleteCategory(Category category);
+        void deleteCategory(Long id);
 
-        void deleteTodo(Todo todo);
+        void deleteTodo(Long id);
 
 }
