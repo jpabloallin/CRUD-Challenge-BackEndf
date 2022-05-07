@@ -38,18 +38,8 @@ public class CategoryTodoDaoImplement implements CategoryTodoDao {
     }
 
     @Override
-    public Category updateTodo(Todo todo) {
-        Long categoryId = todo.getFkCategoryId();
-        Category category = categoryRepository.findById(categoryId).get();
-        if(category != null){
-            for(Integer i = 0; i < category.getTodos().size(); i++){
-                if(todo.getId().equals(category.getTodos().get(i))){
-                    category.getTodos().set(i, todo);
-                }
-            }
-        }
-        todoRepository.save(todo);
-        return categoryRepository.save(category);
+    public Todo updateTodo(Todo todo) {
+        return todoRepository.save(todo);
     }
 
     @Override

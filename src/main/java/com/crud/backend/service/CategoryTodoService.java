@@ -26,7 +26,7 @@ public class CategoryTodoService {
         return categoryTodoService.createTodo(todo);
     }
 
-    public Category updateTodo(Todo todo){
+    public Todo updateTodo(Todo todo){
         return categoryTodoService.updateTodo(todo);
     }
 

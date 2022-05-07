@@ -13,7 +13,7 @@ public interface CategoryTodoDao {
 
         Category createTodo(Todo todo);
 
-        Category updateTodo(Todo todo);
+        Todo updateTodo(Todo todo);
 
         void deleteCategory(Category category);
 
