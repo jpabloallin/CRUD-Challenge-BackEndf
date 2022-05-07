@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/")
-@CrossOrigin(origins = "http://localhost:3000/")
+//@CrossOrigin(origins = "http://localhost:3000/")
 public class CategoryTodoController {
         @Autowired
         private CategoryTodoService service;
@@ -32,7 +32,7 @@ public class CategoryTodoController {
 
         @PutMapping("update/todo")
         public Category updateNote(@RequestBody Todo todo){
-            return service.createTodo(todo);
+            return service.updateTodo(todo);
         }
 
         @DeleteMapping("delete/category")
