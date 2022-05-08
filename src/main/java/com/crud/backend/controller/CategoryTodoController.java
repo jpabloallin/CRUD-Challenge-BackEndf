@@ -6,6 +6,7 @@ import com.crud.backend.service.CategoryTodoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -21,12 +22,12 @@ public class CategoryTodoController {
         }
 
         @PostMapping("create/category")
-        public Category createCategory(@RequestBody Category category){
+        public Category createCategory(@Valid @RequestBody Category category){
             return service.createCategory(category);
         }
 
         @PostMapping("create/todo")
-        public Category createNote(@RequestBody Todo todo){
+        public Category createNote(@Valid @RequestBody Todo todo){
             return service.createTodo(todo);
         }
 

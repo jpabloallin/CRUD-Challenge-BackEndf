@@ -3,6 +3,7 @@ package com.crud.backend.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 
 @Entity(name = "Todo")
 @Table(name = "todo")
@@ -13,6 +14,7 @@ public class Todo {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @NotEmpty(message = "Todo name must not be empty")
     private String name;
 
     private boolean completed;

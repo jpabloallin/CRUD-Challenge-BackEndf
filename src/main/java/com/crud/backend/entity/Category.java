@@ -3,6 +3,7 @@ package com.crud.backend.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +16,7 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @NotEmpty(message = "Category title must not be empty")
     private String title;
     @OneToMany(
             cascade = CascadeType.ALL,
